@@ -1,7 +1,6 @@
 <!DOCTYPE html> 
 <html> 
-<head> 
-<title>Time-Table</title> 
+<head>  
 </head> 
 <body> 
 <h2>Title:-Time-Table</h2> 
