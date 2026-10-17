@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Question Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        /* Style specifically for inputs sitting on the same line as labels */
+        .inline-label {
+            display: inline-block;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        textarea, input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="number"] {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .options-group label {
+            margin-bottom: 12px;
+        }
+        .button-group {
+            margin-top: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Multiple Choice Question</h2>
+
+    <form>
+        <!-- Fixed: Added missing opening fieldset tag here -->
+        <fieldset>
+            <legend>Question Details</legend>
+            <label for="question">Enter the question:</label>
+            <textarea id="question" rows="3" placeholder="Type your question here..."></textarea>
+            
+            <br><br>
+            
+            <label class="inline-label" for="marks">Marks for this question:</label>
+            <input type="number" id="marks" value="1" style="width: 60px;">
+        </fieldset>
+
+        <fieldset class="options-group">
+            <legend>Options</legend>
+            <label>Option A: <input type="text" id="optA" placeholder="Enter option A"></label>
+            <label>Option B: <input type="text" id="optB" placeholder="Enter option B"></label>
+            <label>Option C: <input type="text" id="optC" placeholder="Enter option C"></label>
+            <label>Option D: <input type="text" id="optD" placeholder="Enter option D"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Correct Answer</legend>
+            <label class="inline-label"><input type="radio" name="correctAnswer" value="A"> Option A</label><br>
+            <label class="inline-label"><input type="radio" name="correctAnswer" value="B"> Option B</label><br>
+            <label class="inline-label"><input type="radio" name="correctAnswer" value="C"> Option C</label><br>
+            <label class="inline-label"><input type="radio" name="correctAnswer" value="D"> Option D</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Difficulty Level</legend>
+            <label class="inline-label" for="difficulty">Choose difficulty:</label>
+            <select id="difficulty" style="width: auto; display: inline-block; margin-left: 10px;">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </fieldset>
+
+        <div class="button-group">
+            <button type="submit">Save Question</button>
+            <button type="reset">Clear Form</button>
+        </div>
+    </form>
+
+</body>
+</html>
