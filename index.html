@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #101827, #1e3a5f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .portal {
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 55px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 6vw, 44px);
+      margin: 0 0 12px;
+    }
+
+    .subtitle {
+      color: #cbd5e1;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      padding: 28px 20px;
+      border: 1px solid #ffffff30;
+      border-radius: 18px;
+      background: #ffffff12;
+      color: white;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #ffffff25;
+    }
+
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main class="portal">
+    <div class="icon">🎓</div>
+    <h1>Student Portal</h1>
+    <p class="subtitle">
+      Welcome! Choose the tool you want to use.
+    </p>
+
+    <div class="cards">
+      <a class="card" href="timetable.html">
+        <div class="card-icon">📅</div>
+        <h2>College Timetable</h2>
+        <p>View your weekly class schedule and subjects.</p>
+      </a>
+
+      <a class="card" href="mcq.html">
+        <div class="card-icon">📝</div>
+        <h2>MCQ Form</h2>
+        <p>Practice multiple-choice questions and check your answers.</p>
+      </a>
+    </div>
+
+    <footer>Student Portal · All your college tools in one place</footer>
+  </main>
+</body>
+</html>
